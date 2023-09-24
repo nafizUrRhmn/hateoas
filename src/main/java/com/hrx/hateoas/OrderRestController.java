@@ -38,6 +38,7 @@ public List<Order> orders(){
     return orders;
 }
 
+/** Get order by id*/
 @GetMapping("/{id}")
     public Order order(@PathVariable("id") Integer id){
         Order order = orders.stream().filter(u -> u.getId() == id).findFirst().get();
